@@ -1,0 +1,106 @@
+body {
+    background-color: #A0A0A0;
+}
+.hidden {
+    display: none;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.box-color {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.box-color2 {
+    background-color: #a7a7a7;
+    color: white;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    padding-left: 15px;
+    padding-right: 15px;
+    grid-template-columns: repeat(12, 70px);
+    grid-column-gap: 30px;
+}
+
+#main-header {
+    margin-top: 40px;
+}
+
+#header-logo {
+    height: 100px;
+    width: 270px;
+    grid-column: 1/4;
+}
+
+#header-nav {
+    height: 70px;
+    width: 570px;
+    grid-column: 7/-1;
+    margin-top: 15px;
+}
+
+#hero {
+    margin-top: 70px;
+}
+
+#hero-image {
+    grid-column: 1/-1;
+    width: 1170px;
+    height: 430px;
+    grid-row: 1/3;
+}
+
+#tag-line {
+    grid-column: 1/-1;
+    height: 100px;
+    width: 1170px;
+    grid-row: 2/4;
+    text-align: center;
+}
+
+#features-con {
+    margin-top: 100px;
+}
+
+#features-con h3 {
+    text-align: center;
+    margin-top: 140px;
+}
+
+.feature {
+    width: 370px;
+    height: 300px;
+    grid-column: span 4;
+}
+
+#footer-con-full {
+    height: 100px;
+    margin-top: 150px;
+}
+
+#footer-nav {
+    width: 640px;
+    height: 70px;
+    margin-top: 15px;
+    grid: 1/8;
+    margin-left: 15px;
+}
+
+.icon {
+    margin-top: 10px;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out
+}
+
+.icon:hover {
+    transform: scale(1.7);
+}
