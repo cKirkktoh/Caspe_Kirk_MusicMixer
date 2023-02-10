@@ -1,5 +1,6 @@
 body {
     background-image: url('../images/lights_bg.jpg');
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .hidden {
     display: none;
