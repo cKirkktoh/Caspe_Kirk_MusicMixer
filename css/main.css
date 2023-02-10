@@ -1,5 +1,5 @@
 body {
-    background-color: #264658;
+    background-image: url('../images/lights_bg.jpg');
 }
 .hidden {
     display: none;
@@ -61,13 +61,13 @@ body {
 
 #features-con h3 {
     text-align: center;
-    margin-top: 140px;
 }
 
 .feature {
     width: 370px;
     height: 300px;
     grid-column: span 4;
+    margin: 10px;
 }
 
 #footer-con-full {
@@ -84,10 +84,11 @@ body {
 }
 
 .icon {
-    margin-top: 10px;
     padding: 0 16px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out;
+    width: 200px;
+    height: 200px;
 }
 
 .icon:hover {
