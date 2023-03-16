@@ -1,5 +1,5 @@
 body {
-    background-image: url('../images/lights_bg.jpg');
+    background-image: url('../images/background.jpg');
 }
 .hidden {
     display: none;
@@ -87,8 +87,8 @@ body {
     padding: 0 16px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 
 .icon:hover {
