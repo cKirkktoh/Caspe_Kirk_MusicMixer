@@ -20,15 +20,33 @@
             <section id="features-con" class="grid">
                 <h2 class="hidden">Photo Gallery</h2>
                 <section>
-                    <img class="icon" src="images/bald-man-in-green-jacket.svg">
-                    <img class="icon" src="images/blond-long-hair-business-lady.svg">
-                    <img class="icon" src="images/man-with-yellow-tie-in-jacket.svg">
-                    <img class="icon" src="images/long-curly-hair-lady-with-glasses.svg">
-                    <img class="icon" src="images/business-man-in-yellow-glasses.svg">
-                    <img class="icon" src="images/brown-pigtail-hair-lady.svg">
+                    <img class="icon" src="images/bald-man-in-green-jacket.svg" draggable="true">
+                    <img class="icon" src="images/blond-long-hair-business-lady.svg" draggable="true">
+                    <img class="icon" src="images/man-with-yellow-tie-in-jacket.svg" draggable="true">
+                    <img class="icon" src="images/long-curly-hair-lady-with-glasses.svg" draggable="true">
+                    <img class="icon" src="images/business-man-in-yellow-glasses.svg" draggable="true">
+                    <img class="icon" src="images/brown-pigtail-hair-lady.svg" draggable="true">
                 </section>
             </section>
 
+            <section id="music-con" class="grid">
+                <h2 class="hidden">Music Files</h2>
+                <ul id="music-list">
+                    <li>
+                        <audio id="audio-player" src="audio/malay_music.mp3"></audio>
+                        <div class="audio-controls">
+                            <button id="play-button">&#9658;</button>
+                            <button id="pause-button">&#9612;&#9612;</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>            
+
+            <section id="drop-zone" class="grid">
+                <h2>Drop Zone</h2>
+                <p>Drag an icon here to play music!</p>
+            </section>
+              
         </main>
     </div>
     <div id="footer-con-full" class="box-color">
@@ -39,7 +57,6 @@
                 </nav>
             </footer>
         </div>
-
     </div>
     <script src="js/main.js"></script>
 </body>

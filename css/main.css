@@ -94,3 +94,16 @@ body {
 .icon:hover {
     transform: scale(1.7);
 }
+
+#drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    height: 200px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #999;
+  }
+  
