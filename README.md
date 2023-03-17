@@ -1,6 +1,6 @@
 # Music Mixer
 
-This project is going to be about making an interactive music mixer site.
+This project is going to be about making an interactive music mixer site. And it's all about mixing traditional music instruments with modern era music.
 
 ## Contributing
 
