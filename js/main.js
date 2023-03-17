@@ -1,41 +1,29 @@
-const dropZone = document.getElementById("drop-zone");
-const audioPlayer = document.getElementById("audio-player");
-const playButton = document.getElementById("play-button");
-const pauseButton = document.getElementById("pause-button");
-
-audioPlayer.play();
-
-// Set up drag and drop events
-dropZone.addEventListener("dragover", function(event) {
-    event.preventDefault();
+// Get all the SVG icons and add a dragstart event listener to them
+const icons = document.querySelectorAll('.icon');
+icons.forEach(icon => {
+  icon.addEventListener('dragstart', e => {
+    // Set some data on the drag event that identifies which audio file to play
+    const audioSrc = icon.getAttribute('data-audio-src');
+    e.dataTransfer.setData('text/plain', audioSrc);
+  });
 });
 
-dropZone.addEventListener("drop", function(event) {
-    event.preventDefault();
-    const iconSrc = event.dataTransfer.getData("text");
-    audioPlayer.src = "audio/malay_music.mp3";
-    playButton.style.display = "inline-block";
-    pauseButton.style.display = "inline-block";
-    audioPlayer.play(); // Add this line to play the audio automatically
+// Get all the drop zones and add dragover and drop event listeners to them
+const dropZones = document.querySelectorAll('.drop-zone');
+dropZones.forEach(zone => {
+  zone.addEventListener('dragover', e => {
+    e.preventDefault();
+  });
+
+  zone.addEventListener('drop', e => {
+    e.preventDefault();
+    // Get the audio file to play from the data set on the drag event
+    const audioSrc = e.dataTransfer.getData('text/plain');
+    // Find the corresponding audio player and play it
+    const audioPlayer = document.querySelector(`.audio-player[src="${audioSrc}"]`);
+    if (audioPlayer) {
+      audioPlayer.currentTime = 0;
+      audioPlayer.play();
+    }
+  });
 });
-
-
-// Set up audio player controls
-playButton.addEventListener("click", function() {
-    audioPlayer.play();
-});
-
-pauseButton.addEventListener("click", function() {
-    audioPlayer.pause();
-    });
-    
-    // Reset audio player when it finishes playing
-    audioPlayer.addEventListener("ended", function() {
-    audioPlayer.currentTime = 0;
-    playButton.style.display = "inline-block";
-    pauseButton.style.display = "none";
-    });
-    
-    // Hide play and pause buttons initially
-    playButton.style.display = "none";
-    pauseButton.style.display = "none";
