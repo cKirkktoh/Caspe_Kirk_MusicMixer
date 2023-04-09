@@ -108,6 +108,11 @@ body {
     font-size: 24px;
     color: #999;
   }
+
+  .drop-zone img {
+    width: 100px;
+    height: 100px;
+  }
   
 
   #music-con {
@@ -125,25 +130,7 @@ body {
     overflow: hidden;
   }
   
-  #music-con .audio-controls {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    text-align: center;
-  }
-  
-  #music-con button {
-    background-color: transparent;
-    border: none;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
-    margin-right: 10px;
-  }
+
   
   #drop {
     display: grid;
@@ -193,4 +180,45 @@ body {
     transform: translate(-50%, -50%);
     pointer-events: none;
   }
+
+  .play-button,
+  .pause-button {
+    border: none;
+    background-color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #555;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .play-button:hover,
+  .pause-button:hover {
+    background-color: #444;
+    color: #fff;
+  }
+  .audio-controls {
+    text-align: center;
+  }
+  
+  .play-button, .pause-button {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    font-size: 32px;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .play-button:hover, .pause-button:hover {
+    transform: scale(1.2);
+  }
+    
+
   

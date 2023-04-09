@@ -27,3 +27,20 @@ dropZones.forEach(zone => {
     }
   });
 });
+
+// Get all the audio players and add event listeners to their corresponding play/pause buttons
+const audioPlayers = document.querySelectorAll('.audio-player');
+audioPlayers.forEach(player => {
+  const parentLi = player.parentNode;
+  const playBtn = parentLi.querySelector('.play-button');
+  const pauseBtn = parentLi.querySelector('.pause-button');
+
+  playBtn.addEventListener('click', () => {
+    player.play();
+  });
+
+  pauseBtn.addEventListener('click', () => {
+    player.pause();
+  });
+});
+
